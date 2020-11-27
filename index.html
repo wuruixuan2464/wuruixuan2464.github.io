@@ -64,6 +64,81 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-201127" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/27/201127/" class="article-date">
+  <time datetime="2020-11-27T03:45:02.617Z" itemprop="datePublished">2020-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/27/201127/">JS</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/27/201127/" data-id="ckhztga390000iwvn1an971j4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-201125" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/25/201125/" class="article-date">
+  <time datetime="2020-11-25T06:53:19.448Z" itemprop="datePublished">2020-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/25/201125/">cookie</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Cookie 用于存储 web 页面的用户信息。</p>
+<h4 id="设置cookie"><a href="#设置cookie" class="headerlink" title="设置cookie"></a>设置cookie</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// cname  cookie 键名</span></span><br><span class="line"><span class="comment">// cvalue cookie 值</span></span><br><span class="line"><span class="comment">// exdays 设置到期时间</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname,cvalue,exdays</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">        d.setTime(d.getTime()+(exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</span><br><span class="line">        <span class="keyword">var</span> expires = <span class="string">&quot;expires=&quot;</span>+d.toGMTString();</span><br><span class="line">        <span class="built_in">document</span>.cookie = cname + <span class="string">&quot;=&quot;</span> + cvalue + <span class="string">&quot;; &quot;</span> + expires;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="获取cookie"><a href="#获取cookie" class="headerlink" title="获取cookie"></a>获取cookie</h4><p>cookie 名的参数为 cname。<br>创建一个文本变量用于检索指定 cookie :cname + “=”。<br>使用分号来分割 document.cookie 字符串，并将分割后的字符串数组赋值给 ca (ca = document.cookie.split(‘;’))。<br>循环 ca 数组 (i=0;i&lt;ca.length;i++)，然后读取数组中的每个值，并去除前后空格 (c=ca[i].trim())。<br>如果找到 cookie(c.indexOf(name) == 0)，返回 cookie 的值 (c.substring(name.length,c.length)。<br>如果没有找到 cookie, 返回 “”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">cname</span>)</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> name = cname + <span class="string">&quot;=&quot;</span>;</span><br><span class="line">        <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">&#x27;;&#x27;</span>);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;ca.length; i++)&#123;</span><br><span class="line">          <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">          <span class="keyword">if</span> (c.indexOf(name)==<span class="number">0</span>) <span class="keyword">return</span> c.substring(name.length,c.length);</span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/25/201125/" data-id="ckhx901rd0000p0vnawtxak9s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-201124" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/24/201124/" class="article-date">
@@ -283,6 +358,14 @@
       <ul>
         
           <li>
+            <a href="/2020/11/27/201127/">JS</a>
+          </li>
+        
+          <li>
+            <a href="/2020/11/25/201125/">cookie</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/24/201124/">Css</a>
           </li>
         
@@ -292,10 +375,6 @@
         
           <li>
             <a href="/2020/11/23/201123/">代码规范</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/20/hello-world/">Hello World</a>
           </li>
         
       </ul>
