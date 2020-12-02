@@ -64,6 +64,107 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-201202-1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/201202-1/" class="article-date">
+  <time datetime="2020-12-02T09:41:16.718Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/201202-1/">常用js技巧</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1，声明变量"><a href="#1，声明变量" class="headerlink" title="1，声明变量"></a>1，声明变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> x, y = <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2，给多个变量赋值"><a href="#2，给多个变量赋值" class="headerlink" title="2，给多个变量赋值"></a>2，给多个变量赋值</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [a, b, c] = [<span class="number">5</span>, <span class="number">8</span>, <span class="number">12</span>];</span><br></pre></td></tr></table></figure>
+
+<h3 id="3，三元运算符"><a href="#3，三元运算符" class="headerlink" title="3，三元运算符"></a>3，三元运算符</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Longhand</span></span><br><span class="line"><span class="keyword">let</span> marks = <span class="number">26</span>;</span><br><span class="line"><span class="keyword">let</span> result;</span><br><span class="line"><span class="keyword">if</span>(marks &gt;= <span class="number">30</span>)&#123;</span><br><span class="line"> result = <span class="string">&#x27;Pass&#x27;</span>;</span><br><span class="line">&#125;<span class="keyword">else</span>&#123;</span><br><span class="line"> result = <span class="string">&#x27;Fail&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Shorthand</span></span><br><span class="line"><span class="keyword">let</span> result = marks &gt;= <span class="number">30</span> ? <span class="string">&#x27;Pass&#x27;</span> : <span class="string">&#x27;Fail&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4，默认值"><a href="#4，默认值" class="headerlink" title="4，默认值"></a>4，默认值</h3><p>如果预期值不正确的情况下，我们可以使用 OR(||) 短路运算来给一个变量赋默认值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Shorthand</span></span><br><span class="line"><span class="keyword">let</span> imagePath = getImagePath() || <span class="string">&#x27;default.jpg&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5，与运算"><a href="#5，与运算" class="headerlink" title="5，与运算"></a>5，与运算</h3><p>如果你只有当某个变量为 true 时调用一个函数，那么你可以使用与 (&amp;&amp;)短路形式书写。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Longhand</span></span><br><span class="line"><span class="keyword">if</span> (isLoggedin) &#123;</span><br><span class="line"> goToHomepage();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Shorthand</span></span><br><span class="line">isLoggedin &amp;&amp; goToHomepage();</span><br></pre></td></tr></table></figure>
+
+<h3 id="6，双非位运算符"><a href="#6，双非位运算符" class="headerlink" title="6，双非位运算符 (~~)"></a>6，双非位运算符 (~~)</h3><p>向下取整 是Math.floor()方法的缩写。<br>双非位运算符只对 32 位整数有效，例如 (2**31)-1 = 2147483647。<br>所以对于任何大于 2147483647 的数字，双非位运算符 (~~) 都会给出错误的结果，这种情况下推荐使用 Math.floor() 方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Longhand</span></span><br><span class="line"><span class="keyword">const</span> floor = <span class="built_in">Math</span>.floor(<span class="number">6.8</span>); <span class="comment">// 6</span></span><br><span class="line"><span class="comment">// Shorthand</span></span><br><span class="line"><span class="keyword">const</span> floor = ~~<span class="number">6.8</span>; <span class="comment">// 6</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7，找出数组中的最大和最小数字"><a href="#7，找出数组中的最大和最小数字" class="headerlink" title="7，找出数组中的最大和最小数字"></a>7，找出数组中的最大和最小数字</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = [<span class="number">2</span>, <span class="number">8</span>, <span class="number">15</span>, <span class="number">4</span>];</span><br><span class="line"><span class="built_in">Math</span>.max(...arr); <span class="comment">// 15</span></span><br><span class="line"><span class="built_in">Math</span>.min(...arr); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="8，For-循环"><a href="#8，For-循环" class="headerlink" title="8，For 循环"></a>8，For 循环</h3><p>为了遍历一个数组，我们一般使用传统的for循环。<br>我们可以使用for…of来遍历数组。为了获取每个值的索引，我们可以使用for…in循环。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>];</span><br><span class="line"><span class="comment">//Longhand</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr[i]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//Shorthand</span></span><br><span class="line"><span class="comment">//for of loop</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> val <span class="keyword">of</span> arr) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(val);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//for in loop</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> index <span class="keyword">in</span> arr) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(arr[index]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 我们还可以使用for...in循环来遍历对象属性。</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;<span class="attr">x</span>: <span class="number">20</span>, <span class="attr">y</span>: <span class="number">50</span>&#125;;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(obj[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9，合并数组"><a href="#9，合并数组" class="headerlink" title="9，合并数组"></a>9，合并数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">20</span>, <span class="number">30</span>];</span><br><span class="line"><span class="comment">//Longhand</span></span><br><span class="line"><span class="keyword">let</span> arr2 = arr1.concat([<span class="number">60</span>, <span class="number">80</span>]);</span><br><span class="line"><span class="comment">// [20, 30, 60, 80]</span></span><br><span class="line"><span class="comment">//Shorthand</span></span><br><span class="line"><span class="keyword">let</span> arr2 = [...arr1, <span class="number">60</span>, <span class="number">80</span>];</span><br><span class="line"><span class="comment">// [20, 30, 60, 80]</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/201202-1/" data-id="cki78kop40000ikvn8rif18ck" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-201202" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/02/201202/" class="article-date">
+  <time datetime="2020-12-02T09:31:33.254Z" itemprop="datePublished">2020-12-02</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/02/201202/">promise封装ajax</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="用Promise封装一个AJAX函数"><a href="#用Promise封装一个AJAX函数" class="headerlink" title="用Promise封装一个AJAX函数"></a>用Promise封装一个AJAX函数</h2><p>AJAX即“Asynchronous JavaScript and XML”（异步的JavaScript与XML技术），<br>AJAX的优点是不重载当前页面的情况下，可以向服务器请求新内容。</p>
+<h3 id="发起AJAX的过程："><a href="#发起AJAX的过程：" class="headerlink" title="发起AJAX的过程："></a>发起AJAX的过程：</h3><h4 id="1，创建XMLHttpRequest对象"><a href="#1，创建XMLHttpRequest对象" class="headerlink" title="1，创建XMLHttpRequest对象"></a>1，创建XMLHttpRequest对象</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+<h4 id="2-监听xhr的readyState变化"><a href="#2-监听xhr的readyState变化" class="headerlink" title="2,监听xhr的readyState变化"></a>2,监听xhr的readyState变化</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">    xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// readyState为4的时候已接收完毕</span></span><br><span class="line">    <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>) &#123;</span><br><span class="line">        <span class="comment">// 状态码200表示成功</span></span><br><span class="line">        <span class="keyword">if</span> (xhr.status === <span class="number">200</span>) &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(xhr.responseText);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(xhr.status);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h4 id="3-open-规划请求参数"><a href="#3-open-规划请求参数" class="headerlink" title="3,open 规划请求参数"></a>3,open 规划请求参数</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// method  Get Post</span></span><br><span class="line"><span class="comment">// URL 请求地址</span></span><br><span class="line"><span class="comment">// bool 是否异步</span></span><br><span class="line">    xhr.open(method, url, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4，send-发送请求"><a href="#4，send-发送请求" class="headerlink" title="4，send 发送请求"></a>4，send 发送请求</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h2 id="利用promise封装"><a href="#利用promise封装" class="headerlink" title="利用promise封装"></a>利用promise封装</h2><p>接下来，用Promise简单的封装一个AJAX函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">ajax</span>(<span class="params">method, url, params</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 创建XMLHttpRequest对象</span></span><br><span class="line">        <span class="keyword">const</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">        <span class="comment">// 状态改变时的回调</span></span><br><span class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="comment">// readyState为4的时候已接收完毕</span></span><br><span class="line">            <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>) &#123;</span><br><span class="line">                <span class="comment">// 状态码200表示成功</span></span><br><span class="line">                <span class="keyword">if</span> (xhr.status === <span class="number">200</span>) &#123;</span><br><span class="line">                    resolve(xhr.responseText);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    reject(xhr.status);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// get</span></span><br><span class="line">        <span class="keyword">if</span> (method === <span class="string">&#x27;get&#x27;</span> || method === <span class="string">&#x27;GET&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> params === <span class="string">&#x27;object&#x27;</span>) &#123;</span><br><span class="line">                <span class="comment">// params拆解成字符串</span></span><br><span class="line">                params = <span class="built_in">Object</span>.keys(params).map(<span class="function"><span class="keyword">function</span> (<span class="params">key</span>) </span>&#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="built_in">encodeURIComponent</span>(key) + <span class="string">&#x27;=&#x27;</span> + <span class="built_in">encodeURIComponent</span>(params[key]);</span><br><span class="line">                &#125;).join(<span class="string">&#x27;&amp;&#x27;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            url = params ? url + <span class="string">&#x27;?&#x27;</span> + params : url;</span><br><span class="line">            xhr.open(method, url, <span class="literal">true</span>);</span><br><span class="line">            xhr.send();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//post</span></span><br><span class="line">        <span class="keyword">if</span> (method === <span class="string">&#x27;post&#x27;</span> || method === <span class="string">&#x27;POST&#x27;</span>) &#123;</span><br><span class="line">            xhr.open(method, url, <span class="literal">true</span>);</span><br><span class="line">            xhr.setRequestHeader(<span class="string">&quot;Content-type&quot;</span>, <span class="string">&quot;application/json; charset=utf-8&quot;</span>);</span><br><span class="line">            xhr.send(<span class="built_in">JSON</span>.stringify(params));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 用法</span></span><br><span class="line"></span><br><span class="line">ajax(<span class="string">&#x27;GET&#x27;</span> , <span class="string">&#x27;127.0.0.1/data.json&#x27;</span>, &#123;</span><br><span class="line">    data:&#123;</span><br><span class="line">        name:<span class="string">&#x27;www&#x27;</span>,</span><br><span class="line">        age:<span class="number">14</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;).then(<span class="function"><span class="params">res</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/02/201202/" data-id="cki78kopg0001ikvn5nnr8cw2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-201128" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/28/201128/" class="article-date">
@@ -392,7 +493,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
     </div>
   </div>
 
@@ -405,6 +506,14 @@
       <ul>
         
           <li>
+            <a href="/2020/12/02/201202-1/">常用js技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/201202/">promise封装ajax</a>
+          </li>
+        
+          <li>
             <a href="/2020/11/28/201128/">2d看板娘</a>
           </li>
         
@@ -414,14 +523,6 @@
         
           <li>
             <a href="/2020/11/25/201125/">cookie</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/24/201124/">Css</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/23/201123r/">常用方法</a>
           </li>
         
       </ul>
