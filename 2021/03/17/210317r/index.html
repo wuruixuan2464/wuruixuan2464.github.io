@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>网页版word编译器插件以及layui时间插件使用 | Shi Yu Technology</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="富文本编辑器 指定容器引入   123&lt;div&gt;    &lt;script id&#x3D;&quot;container&quot; name&#x3D;&quot;content&quot; type&#x3D;&quot;text&#x2F;plain&quot;&gt;&lt;&#x2F;script&gt;&lt;&#x2F;div&gt; 配置12345678910111213141516171819202122232425&#x2F;&#x2F;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页版word编译器插件以及layui时间插件使用">
+<meta property="og:url" content="http://example.com/2021/03/17/210317r/index.html">
+<meta property="og:site_name" content="Shi Yu Technology">
+<meta property="og:description" content="富文本编辑器 指定容器引入   123&lt;div&gt;    &lt;script id&#x3D;&quot;container&quot; name&#x3D;&quot;content&quot; type&#x3D;&quot;text&#x2F;plain&quot;&gt;&lt;&#x2F;script&gt;&lt;&#x2F;div&gt; 配置12345678910111213141516171819202122232425&#x2F;&#x2F;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-03-17T06:33:05.953Z">
+<meta property="article:modified_time" content="2021-03-17T06:47:19.686Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Shi Yu Technology" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Shi Yu Technology</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-210317r" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/17/210317r/" class="article-date">
+  <time datetime="2021-03-17T06:33:05.953Z" itemprop="datePublished">2021-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      网页版word编译器插件以及layui时间插件使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="富文本编辑器"><a href="#富文本编辑器" class="headerlink" title="富文本编辑器"></a>富文本编辑器</h3><p> 指定容器引入</p>
+<script type="text/javascript" src="../ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="../ueditor/ueditor.all.js"></script>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;script id=<span class="string">&quot;container&quot;</span> name=<span class="string">&quot;content&quot;</span> type=<span class="string">&quot;text/plain&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在全局注册</span></span><br><span class="line"><span class="keyword">var</span> ue = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 富文本编辑器初始化 在渲染结束后初始化</span></span><br><span class="line">            ue = UE.getEditor(<span class="string">&#x27;container&#x27;</span>, &#123;</span><br><span class="line">                <span class="comment">// initialFrameWidth: 800,</span></span><br><span class="line">                initialFrameHeight: <span class="number">400</span>,</span><br><span class="line">                toolbars: [</span><br><span class="line">                    [<span class="string">&#x27;fullscreen&#x27;</span>, <span class="string">&#x27;undo&#x27;</span>, <span class="string">&#x27;redo&#x27;</span>, <span class="string">&#x27;formatmatch&#x27;</span>, <span class="string">&#x27;removeformat&#x27;</span>, <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;fontsize&#x27;</span>, <span class="string">&#x27;bold&#x27;</span>, <span class="string">&#x27;italic&#x27;</span>, <span class="string">&#x27;underline&#x27;</span>, <span class="string">&#x27;forecolor&#x27;</span>, <span class="string">&#x27;backcolor&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;justifyleft&#x27;</span>, <span class="string">&#x27;justifycenter&#x27;</span>, <span class="string">&#x27;justifyright&#x27;</span>, <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;rowspacingtop&#x27;</span>, <span class="string">&#x27;rowspacingbottom&#x27;</span>, <span class="string">&#x27;lineheight&#x27;</span>, <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;insertorderedlist&#x27;</span>, <span class="string">&#x27;insertunorderedlist&#x27;</span>, <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;imagenone&#x27;</span>, <span class="string">&#x27;imageleft&#x27;</span>, <span class="string">&#x27;imageright&#x27;</span>, <span class="string">&#x27;imagecenter&#x27;</span>, <span class="string">&#x27;|&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;simpleupload&#x27;</span>, <span class="string">&#x27;attachment&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;inserttable&#x27;</span>, <span class="string">&#x27;deletetable&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;insertparagraphbeforetable&#x27;</span>, <span class="string">&#x27;insertrow&#x27;</span>, <span class="string">&#x27;deleterow&#x27;</span>, <span class="string">&#x27;insertcol&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;deletecol&#x27;</span>, <span class="string">&#x27;mergecells&#x27;</span>, <span class="string">&#x27;mergeright&#x27;</span>, <span class="string">&#x27;mergedown&#x27;</span>,</span><br><span class="line">                        <span class="string">&#x27;splittocells&#x27;</span>, <span class="string">&#x27;splittorows&#x27;</span>, <span class="string">&#x27;splittocols&#x27;</span>, <span class="string">&#x27;|&#x27;</span>, <span class="string">&#x27;drafts&#x27;</span></span><br><span class="line">                    ]</span><br><span class="line">                ],</span><br><span class="line">                autoHeightEnabled: <span class="literal">true</span>,</span><br><span class="line">                autoFloatEnabled: <span class="literal">true</span></span><br><span class="line">            &#125;);</span><br><span class="line">            </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 设置初始内容</span></span><br><span class="line">   ue.setContent(<span class="string">&quot;内容&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">//  获取内容</span></span><br><span class="line">  ue.getContent();</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="layui时间插件"><a href="#layui时间插件" class="headerlink" title="layui时间插件"></a>layui时间插件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> _this = <span class="built_in">this</span>;</span><br><span class="line">layui.use([<span class="string">&#x27;laydate&#x27;</span>], <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> laydate = layui.laydate;</span><br><span class="line">        laydate.render(&#123;</span><br><span class="line">            elem: <span class="string">&quot;#app&quot;</span>, <span class="comment">//指定元素</span></span><br><span class="line">            theme: <span class="string">&quot;#000&quot;</span>, <span class="comment">//主题色</span></span><br><span class="line">            done: <span class="function"><span class="keyword">function</span> (<span class="params">value, date</span>) </span>&#123;</span><br><span class="line">             <span class="comment">//  选择时间的回调</span></span><br><span class="line">             <span class="built_in">console</span>.log(value,date)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/17/210317r/" data-id="ckmd3213y00005wvn73jf15ta" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/03/17/210317/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">西瓜视频插件使用</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">November 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/03/17/210317r/">网页版word编译器插件以及layui时间插件使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/17/210317/">西瓜视频插件使用</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/12/210312/">插件使用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/201202-1/">常用js技巧</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/02/201202/">promise封装ajax</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
