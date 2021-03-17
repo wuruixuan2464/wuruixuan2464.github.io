@@ -64,6 +64,51 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-210317" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/03/17/210317/" class="article-date">
+  <time datetime="2021-03-17T06:14:02.220Z" itemprop="datePublished">2021-03-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/03/17/210317/">西瓜视频插件使用</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">let</span> player = <span class="keyword">new</span> Player(&#123;</span><br><span class="line">    id: <span class="string">&#x27;xgVideo&#x27;</span>,</span><br><span class="line">    url: <span class="string">&#x27;./video.mp4&#x27;</span>,</span><br><span class="line">    poster: <span class="string">&#x27;./show_img_2.png&#x27;</span>, <span class="comment">//设置封面图</span></span><br><span class="line">    playbackRate: [<span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1</span>, <span class="number">1.5</span>, <span class="number">2</span>], <span class="comment">//传入倍速可选数组</span></span><br><span class="line">    defaultPlaybackRate: <span class="number">1</span>, <span class="comment">//默认倍速</span></span><br><span class="line">    width: <span class="number">800</span>,</span><br><span class="line">    height: <span class="number">400</span>,</span><br><span class="line">    fluid: <span class="literal">true</span>, <span class="comment">//流式布局，可使播放器宽度跟随父元素的宽度大小变化，且高度按照配置项中的高度和宽度的比例来变化（播放器宽高未设置时按照内部默认值来计算）。</span></span><br><span class="line">    <span class="comment">// fitVideoSize: &#x27;fixHeight&#x27;, //1、fitVideoSize设置为fixWidth，表示容器宽度固定，容器高度按照视频内容比例增大或减小；2、fitVideoSize设置为fixHeight，表示容器高度固定，容器宽度按照视频内容比例增大或减小；3、fitVideoSize设置为auto，表示容器高度或宽度按照视频内容比例增大。</span></span><br><span class="line">    volume: <span class="number">0.6</span>, <span class="comment">//音量大小</span></span><br><span class="line">    autoplay: <span class="literal">true</span>, <span class="comment">//自动播放</span></span><br><span class="line">    loop: <span class="literal">false</span>, <span class="comment">//循环播放</span></span><br><span class="line">    videoInit: <span class="literal">false</span>, <span class="comment">//设置视频初始帧 该配置与autoplay配置项不可同时设置为true。该配置在移动端无效。</span></span><br><span class="line">    <span class="comment">//lastPlayTime: 10, //视频起播时间（单位：秒）播放器支持设置视频起播时间。</span></span><br><span class="line">    <span class="comment">//lastPlayTimeHideDelay: 5, //提示文字展示时长（单位：秒）</span></span><br><span class="line">    rotateFullscreen: <span class="literal">true</span>, <span class="comment">//部分移动端场景的系统默认全屏功能不支持横屏，播放器支持通过配置 rotateFullscreen: true 使触发全屏时实现样式横屏全屏。使用该配置时不需配置rotate和cssFullscreen。</span></span><br><span class="line">    <span class="comment">// 视频跳转播放下一集，需提供视频资源列表。</span></span><br><span class="line">    <span class="comment">//     playNext: &#123;</span></span><br><span class="line">    <span class="comment">//     urlList: [</span></span><br><span class="line">    <span class="comment">//       &#x27;url1&#x27;,</span></span><br><span class="line">    <span class="comment">//       &#x27;url2&#x27;,</span></span><br><span class="line">    <span class="comment">//       &#x27;url3&#x27;</span></span><br><span class="line">    <span class="comment">//     ],</span></span><br><span class="line">    <span class="comment">// &#125;,</span></span><br><span class="line">    download: <span class="literal">true</span>, <span class="comment">//下载控件</span></span><br><span class="line">    controls: <span class="literal">true</span>,<span class="comment">//关闭控制键</span></span><br><span class="line">    pip: <span class="literal">true</span>, <span class="comment">//小屏画中画</span></span><br><span class="line">    screenShot: <span class="literal">true</span>, <span class="comment">//截图</span></span><br><span class="line">    keyShortcut: <span class="string">&#x27;on&#x27;</span>, <span class="comment">//键盘快捷键可通过该配置项开启键盘快捷键：按 → 键快进10秒， 按 ← 键后退10秒，按 ↑ 键调高音量，按 ↓ 键调低音量，按 space 键切换播放/暂停状态。</span></span><br><span class="line">    errorTips: <span class="string">`请&lt;span&gt;刷新&lt;/span&gt;试试`</span>, <span class="comment">//自定义错误提示</span></span><br><span class="line">        <span class="comment">// 播放器使用自执行的插件机制，如需要在插件生效前执行某些方法，开发者可将相关方法写在execBeforePluginsCall配置项数组中</span></span><br><span class="line">    execBeforePluginsCall: [<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;Execute before plugins call&#x27;</span>)</span><br><span class="line">    &#125;],</span><br><span class="line"></span><br><span class="line">    danmu: &#123;</span><br><span class="line">        panel: <span class="literal">true</span>, <span class="comment">//弹幕控制面板</span></span><br><span class="line">        comments: [ <span class="comment">//弹幕数组</span></span><br><span class="line">            &#123;</span><br><span class="line">                duration: <span class="number">15000</span>, <span class="comment">//弹幕持续显示时间,毫秒(最低为5000毫秒)</span></span><br><span class="line">                id: <span class="string">&#x27;1&#x27;</span>, <span class="comment">//弹幕id，需唯一</span></span><br><span class="line">                start: <span class="number">3000</span>, <span class="comment">//弹幕出现时间，毫秒</span></span><br><span class="line">                prior: <span class="literal">true</span>, <span class="comment">//该条弹幕优先显示，默认false</span></span><br><span class="line">                color: <span class="literal">true</span>, <span class="comment">//该条弹幕为彩色弹幕，默认false</span></span><br><span class="line">                txt: <span class="string">&#x27;长弹幕长弹幕长弹幕长弹幕长弹幕长弹幕长弹幕长弹幕长弹幕长弹幕&#x27;</span>, <span class="comment">//弹幕文字内容</span></span><br><span class="line">                style: &#123; <span class="comment">//弹幕自定义样式</span></span><br><span class="line">                    color: <span class="string">&#x27;#ff9500&#x27;</span>,</span><br><span class="line">                    fontSize: <span class="string">&#x27;20px&#x27;</span>,</span><br><span class="line">                    border: <span class="string">&#x27;solid 1px #ff9500&#x27;</span>,</span><br><span class="line">                    borderRadius: <span class="string">&#x27;50px&#x27;</span>,</span><br><span class="line">                    padding: <span class="string">&#x27;5px 11px&#x27;</span>,</span><br><span class="line">                    backgroundColor: <span class="string">&#x27;rgba(255, 255, 255, 0.1)&#x27;</span></span><br><span class="line">                &#125;,</span><br><span class="line">                mode: <span class="string">&#x27;scroll&#x27;</span> <span class="comment">//显示模式，top顶部居中，bottom底部居中，scroll滚动，默认为scroll</span></span><br><span class="line">                <span class="comment">// el: DOM //直接传入一个自定义的DOM元素作为弹幕，使用该项的话会忽略所提供的txt和style</span></span><br><span class="line">                <span class="comment">// eventListeners: [&#123; //支持自定义DOM设置DOM监听事件</span></span><br><span class="line">                <span class="comment">//   event: &#x27;click&#x27;,</span></span><br><span class="line">                <span class="comment">//   listener: function (e) &#123;</span></span><br><span class="line">                <span class="comment">//     console.log(&#x27;click&#x27;)</span></span><br><span class="line">                <span class="comment">//   &#125;,</span></span><br><span class="line">                <span class="comment">//   useCapture: false,</span></span><br><span class="line">                <span class="comment">// &#125;]</span></span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        area: &#123; <span class="comment">//弹幕显示区域</span></span><br><span class="line">            start: <span class="number">0</span>, <span class="comment">//区域顶部到播放器顶部所占播放器高度的比例</span></span><br><span class="line">            end: <span class="number">1</span> <span class="comment">//区域底部到播放器顶部所占播放器高度的比例</span></span><br><span class="line">        &#125;,</span><br><span class="line">        closeDefaultBtn: <span class="literal">true</span>, <span class="comment">//开启此项后不使用默认提供的弹幕开关，默认使用西瓜播放器提供的开关</span></span><br><span class="line">        defaultOff: <span class="literal">false</span> <span class="comment">//开启此项后弹幕不会初始化，默认初始化弹幕</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// player.danmu.start() //弹幕初始化并播放(内部默认已调用)</span></span><br><span class="line">    <span class="comment">// player.danmu.pause() //弹幕暂停</span></span><br><span class="line">    <span class="comment">// player.danmu.play() //弹幕继续播放</span></span><br><span class="line">    <span class="comment">// player.danmu.stop() //弹幕停止并消失</span></span><br><span class="line">    <span class="comment">// player.danmu.sendComment(&#123; //发送弹幕</span></span><br><span class="line">    <span class="comment">//     duration: 15000,</span></span><br><span class="line">    <span class="comment">//     id: &#x27;id&#x27;,</span></span><br><span class="line">    <span class="comment">//     start: 3000,</span></span><br><span class="line">    <span class="comment">//     txt: &#x27;弹幕内容&#x27;,</span></span><br><span class="line">    <span class="comment">//     style: &#123;</span></span><br><span class="line">    <span class="comment">//         color: &#x27;#ff9500&#x27;,</span></span><br><span class="line">    <span class="comment">//         fontSize: &#x27;20px&#x27;,</span></span><br><span class="line">    <span class="comment">//         border: &#x27;solid 1px #ff9500&#x27;,</span></span><br><span class="line">    <span class="comment">//         borderRadius: &#x27;50px&#x27;,</span></span><br><span class="line">    <span class="comment">//         padding: &#x27;5px 11px&#x27;,</span></span><br><span class="line">    <span class="comment">//         backgroundColor: &#x27;rgba(255, 255, 255, 0.1)&#x27;</span></span><br><span class="line">    <span class="comment">//     &#125;</span></span><br><span class="line">    <span class="comment">// &#125;)</span></span><br><span class="line">    <span class="comment">// player.danmu.setCommentDuration(id, duration) //按照id改变某一个弹幕的持续显示时间</span></span><br><span class="line">    <span class="comment">// player.danmu.setAllDuration(mode, duration) //改变所有已加入队列弹幕的持续显示时间</span></span><br><span class="line">    <span class="comment">// player.danmu.setCommentID(oldID, newID) //改变某一个弹幕的id</span></span><br><span class="line">    <span class="comment">// player.danmu.hide(mode) //屏蔽某一类弹幕(参数可选值 scroll | top | bottom | color)</span></span><br><span class="line">    <span class="comment">// player.danmu.show(mode) //显示某一类弹幕(参数可选值 scroll | top | bottom | color)</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><pre><code>play播放  playing继续播放  pause暂停 ended视频结束  error视频错误 seeking seek播放</code></pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 永久注册 </span></span><br><span class="line"><span class="comment">// 结束回调  在配置为loop为true时无效</span></span><br><span class="line">player.on(<span class="string">&#x27;ended&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="string">&quot;end&quot;</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 一次注册</span></span><br><span class="line">player.once(<span class="string">&#x27;事件名&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 事件注销</span></span><br><span class="line">player.off(<span class="string">&#x27;事件名&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 时间触发</span></span><br><span class="line">player.emit(<span class="string">&#x27;事件名&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生命周期</span></span><br><span class="line">      <span class="comment">// 实例化完成</span></span><br><span class="line">      <span class="comment">// 播放器调用Player进行实例化，实例化结束后会触发 ready 事件，通过对 ready 的监听可以确定实例化是否完成。实例化主要包括自定义UI生成、事件绑定、插件化实例化工作。</span></span><br><span class="line">      player.once(<span class="string">&#x27;ready&#x27;</span>,<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;ready&#x27;</span>)&#125;)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 视频生成结束</span></span><br><span class="line">      <span class="comment">// 考虑到节约视频流量和HTTP连接数的限制，PC端播放器在实例化的时候只是UI生效并未生成video视频，只有点击播放后才会创建video标签拉取视频进行播放。如果想捕获创建video的时机，监听 complete 事件。</span></span><br><span class="line">      player.once(<span class="string">&#x27;complete&#x27;</span>,<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;complete&#x27;</span>)&#125;)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 实例已销毁</span></span><br><span class="line">      <span class="comment">// 播放器在销毁实例的时候会触发 destroy 事件</span></span><br><span class="line">      player.once(<span class="string">&#x27;destroy&#x27;</span>,<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;destroy&#x27;</span>)&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>ready事件和complete事件是在实例化的时候已经触发，为了保证“后监听”方式能捕获到事件，请勿使用异步操作来监听，如setTimeout、Promise等，如果需要使用这些异步操作，请在响应函数内完成。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 错误的方式</span></span><br><span class="line">    <span class="keyword">let</span> player=<span class="keyword">new</span> Player(&#123;<span class="comment">/*配置*/</span>&#125;);</span><br><span class="line">        <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">            player.once(<span class="string">&#x27;ready&#x27;</span>,<span class="function">()=&gt;</span>&#123;<span class="built_in">console</span>.log(<span class="string">&#x27;ready&#x27;</span>)&#125;)</span><br><span class="line">        &#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确的方式</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> player=<span class="keyword">new</span> Player(&#123;<span class="comment">/*配置*/</span>&#125;);</span><br><span class="line">    player.once(<span class="string">&#x27;ready&#x27;</span>,<span class="function">()=&gt;</span>&#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">&#x27;ready&#x27;</span>)</span><br><span class="line">      &#125;, <span class="number">1000</span>);</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/17/210317/" data-id="ckmd23c0l0000ygvn86fn3qyv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-210312" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/03/12/210312/" class="article-date">
@@ -483,45 +528,12 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/11/20/hello-world/" class="article-date">
-  <time datetime="2020-11-20T09:52:14.727Z" itemprop="datePublished">2020-11-20</time>
-</a>
+
+
+  <nav id="page-nav">
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/11/20/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>如何搭建hexo 博客?推荐一个不错的方法！请查看<a target="_blank" rel="noopener" href="https://www.cnblogs.com/visugar/p/6821777.html">hexo个人博客</a></p>
-<h2 id="git-推送代码到github"><a href="#git-推送代码到github" class="headerlink" title="git 推送代码到github"></a>git 推送代码到github</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一次提交</span></span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m <span class="string">&quot;first commit&quot;</span></span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/wuruixuan2464/personal.git</span><br><span class="line">git push -u origin main</span><br><span class="line"></span><br><span class="line"><span class="comment"># 推送</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;提交说明&#x27;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/11/20/hello-world/" data-id="ckhq35ffv0000psvn8yvtbysf" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+  </nav>
 
 </section>
         
@@ -552,6 +564,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/17/210317/">西瓜视频插件使用</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/12/210312/">插件使用</a>
           </li>
         
@@ -565,10 +581,6 @@
         
           <li>
             <a href="/2020/11/28/201128/">2d看板娘</a>
-          </li>
-        
-          <li>
-            <a href="/2020/11/27/201127/">JS</a>
           </li>
         
       </ul>
