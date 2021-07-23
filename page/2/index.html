@@ -64,6 +64,50 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-201124" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/11/24/201124/" class="article-date">
+  <time datetime="2020-11-24T10:33:28.371Z" itemprop="datePublished">2020-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/11/24/201124/">Css</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><p>禁止输入</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1: disabled   被禁用的 input 元素可复制，不能接收焦点,设置后文字的颜色会变成灰色。无法与 <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;hidden&quot;</span>&gt;</span> 一起使用</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;哈哈哈&quot;</span> <span class="attr">disabled</span>=<span class="string">&quot;disabled&quot;</span>&gt;</span></span><br><span class="line"></span><br><span class="line">2: readonly规定输入字段为只读可复制，但是，用户可以使用Tab键切换到该字段，可选择,可以接收焦点，还可以选中或拷贝其文本。</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">value</span>=<span class="string">&quot;哈哈哈&quot;</span> <span class="attr">readonly</span>=<span class="string">&quot;readonly&quot;</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>CSS3中新增了[resize]缩放属性，这个属性可以应用到任意元素。目前只有Webkit内核的浏览器才支持这个css3属性，即Google chrome和Apple safari都支持。<br>而textarea标签中，Webkit内核的浏览器会默认resize的值为both，即用户可以调节元素的宽度和高度。textarea右下角有一个可以控制缩放的按钮。<br>一般情况下，textarea是被固定宽度和高度的，如果你不愿意让其任意缩放，你可以为textarea添加resize:none的css属性。这样就可以去除Webkit内核的浏览器的默认显示。</p>
+<h4 id="以下是resize属性的的各个取值"><a href="#以下是resize属性的的各个取值" class="headerlink" title="以下是resize属性的的各个取值:"></a>以下是resize属性的的各个取值:</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">resize</span><span class="selector-pseudo">:none</span>; 用户不能操纵机制调节元素的尺寸</span><br><span class="line"><span class="selector-tag">resize</span><span class="selector-pseudo">:both</span>; 用户可以调节元素的宽度和高度</span><br><span class="line"><span class="selector-tag">resize</span><span class="selector-pseudo">:horizontal</span>;用户可以调节元素的宽度</span><br><span class="line"><span class="selector-tag">resize</span><span class="selector-pseudo">:vertical</span>;让用户可以调节元素的高度</span><br><span class="line"><span class="selector-tag">resize</span><span class="selector-pseudo">:inherit</span>;默认继承。</span><br></pre></td></tr></table></figure>
+
+<p>验证数字</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">限制input只能输入数字</span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;number&quot;</span> <span class="attr">onkeyup</span>=<span class="string">&quot;this.value=this.value.replace(/\D/g,&#x27;&#x27;)&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="text"><a href="#text" class="headerlink" title="text"></a>text</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 单行溢出变点 */</span></span><br><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>;</span><br><span class="line"><span class="selector-tag">white-space</span>: <span class="selector-tag">nowrap</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 多行 */</span></span><br><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line"><span class="selector-tag">-webkit-box-orient</span>: <span class="selector-tag">vertical</span>;</span><br><span class="line"><span class="selector-tag">-webkit-line-clamp</span>: 3;</span><br><span class="line"><span class="selector-tag">overflow</span>: <span class="selector-tag">hidden</span>;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/11/24/201124/" data-id="ckhvucks80000e0vn0eda7ixx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-201123r" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/11/23/201123r/" class="article-date">
@@ -247,6 +291,10 @@
       <ul>
         
           <li>
+            <a href="/2021/07/23/210723/">CSS样式整理清单(2)</a>
+          </li>
+        
+          <li>
             <a href="/2021/07/22/210722/">CSS样式整理清单</a>
           </li>
         
@@ -260,10 +308,6 @@
         
           <li>
             <a href="/2021/03/12/210312/">插件使用</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/02/201202-1/">常用js技巧</a>
           </li>
         
       </ul>
